@@ -12,11 +12,13 @@ var vecchieEmail =
 // chiedi all'utente la sua email
 var nuovaEmail = prompt('Qual è la tua email?');
 // controlla che sia nella lista di chi può accedere 
+var control = false;
 for (i = 0; i < vecchieEmail.length; i++) {
     if (vecchieEmail[i] == nuovaEmail) {
+        control = true;
         document.getElementById('message').innerHTML = "L'email è già stata registrata in passato!";
     } else {
-        document.getElementById('message').innerHTML = "L'email non è mai stata registrata! ISCRIVITI ADESSO!!!";
+        document.getElementById('message').innerHTML = "Registrati";
     }
 }
 // stampa un messaggio appropriato sull’esito del controllo.
